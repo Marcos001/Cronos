@@ -185,12 +185,15 @@ public class chat extends AppCompatActivity {
         return deira;
     }
 
+
     public class Consumidor {
+
+        private final String ip_server = "192.168.0.104";
 
         util u = new util();
 
         private final static String QUEUE_NAME = "enviar";
-        final String HOST = System.getProperty("amqp.host", "192.168.0.104");
+        final String HOST = System.getProperty("amqp.host", ip_server);
         final int PORT = Integer.getInteger("amqp.port", 5672);
         final String EXCHANGE = System.getProperty("amqp.exchange", "systemExchange");
         final String ENCODING = "UTF-8";
